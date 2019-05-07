@@ -7,7 +7,7 @@ class DirectorOption implements \Magento\Framework\Option\ArrayInterface
     {
         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
         $collection = $objectManager->create('Magenest\Movie\Model\ResourceModel\Director\Collection');
-        $this->director[] = ['value' => 0, 'label' => '--Please Select--'];
+        $this->director[] = ['value' => null, 'label' => '--Please Select--'];
         foreach($collection as $row){
             $this->director[] = ['value' => $row['director_id'], 'label' => $row['name']];
         }

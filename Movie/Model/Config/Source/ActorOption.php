@@ -7,7 +7,7 @@ class ActorOption implements \Magento\Framework\Option\ArrayInterface
     {
         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
         $collection = $objectManager->create('Magenest\Movie\Model\ResourceModel\Actor\Collection');
-        $this->actor[] = ['value' => 0, 'label' => '--Please Select--'];
+        $this->actor[] = ['value' => null, 'label' => '--Please Select--'];
         foreach($collection as $row){
             $this->actor[] = ['value' => $row['actor_id'], 'label' => $row['name']];
         }
