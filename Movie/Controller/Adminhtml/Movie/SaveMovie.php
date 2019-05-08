@@ -28,7 +28,10 @@ class SaveMovie extends \Magento\Backend\App\Action
                 $movie = $this->_objectManager->create("Magenest\Movie\Model\Movie");
                 $movie->setName($data['name']);
                 $movie->setDescription($data['description']);
-                $movie->setRating($data['rating']);
+                $this->_eventManager->dispatch(
+                    'set_rating_movie_save',
+                    ["movie" => $movie]
+                );
                 if($data['director_id'] != null) {
                     $movie->setDirector_id($data['director_id']);
                 }
