@@ -1,0 +1,47 @@
+<h2>Modal Test Page</h2>
+<button type="button" class="action" data-trigger="trigger">
+    <span data-bind="i18n: 'Click Here'"></span>
+</button>
+<div data-bind="mageInit: {
+        'Magento_Ui/js/modal/modal':{
+            'type': 'popup',
+            'title': 'Popup title',
+            'trigger': '[data-trigger=trigger]',
+            'responsive': true,
+            'buttons': [{
+                text: 'Submit',
+                class: 'action'
+            }]
+        }}">
+    <div class="content">Hello, I'm Khang</div>
+</div>
+<button type="button"  id="click-me" data-mage-init='{"myjs": {}}' data-trigger="">
+    <span data-bind="i18n: 'Open Magento Modal Login'"></span>
+</button>
+<button type="button" class="action" data-trigger="">
+    <span data-bind="i18n: 'Open Custom Modal Login'"></span>
+</button>
+<div id="popup-mpdal"></div>
+
+
+<div id="popup-modal" style="display:none;">
+    <form class="form" id="custom-form" method="post" autocomplete="off">
+        <fieldset class="fieldset">
+            <div class="field required">
+                <div class="control">
+                    <input type="password" name="email" id="email_address" value="" title="<?php echo __('Email') ?>" class="input-text" data-validate="{required:true, 'validate-email':true}">
+                </div>
+            </div>
+            <div class="field required">
+                <div class="control">
+                    <input type="password" name="email" id="email_address" value="" title="<?php echo __('Email') ?>" class="input-text" data-validate="{required:true, 'validate-email':true}">
+                </div>
+            </div>
+        </fieldset>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit" class="action submit primary" title="<?php  echo __('Submit') ?>"><span><?php echo __('Submit') ?></span></button>
+            </div>
+        </div>
+    </form>
+</div>
