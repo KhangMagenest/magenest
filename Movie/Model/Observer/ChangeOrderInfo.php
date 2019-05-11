@@ -2,7 +2,7 @@
 namespace Magenest\Movie\Model\Observer;
 use Magento\Framework\Event\ObserverInterface;
 
-class SetTextFieldMovieConfig implements ObserverInterface
+class ChangeOrderInfo implements ObserverInterface
 {
     /** @var \Psr\Log\LoggerInterface $logger */
     protected $logger;
@@ -12,7 +12,8 @@ class SetTextFieldMovieConfig implements ObserverInterface
     }
     public function execute(\Magento\Framework\Event\Observer $observer)
     {
-        $data = $observer->getRequestParams();
+        $observer->getProduct()->setName('Test Configuration');
+        $observer->getProduct()->setIsSuperMode(true);
 
     }
 }

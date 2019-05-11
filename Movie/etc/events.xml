@@ -9,4 +9,7 @@
     <event name="admin_system_config_changed_section_movie">
         <observer name="custom_admin_system_config_changed_section_movie"  instance="Magenest\Movie\Model\Observer\SetTextFieldMovieConfig" />
     </event>
+    <event name="checkout_cart_product_add_after">
+        <observer name="customprice" instance="Magenest\Movie\Model\Observer\ChangeOrderInfo" />
+    </event>
 </config>
