@@ -1,26 +1,3 @@
-<h2>Modal Test Page</h2>
-<button type="button" class="action" data-trigger="trigger">
-    <span data-bind="i18n: 'Click Here'"></span>
-</button>
-<div data-bind="mageInit: {
-        'Magento_Ui/js/modal/modal':{
-            'type': 'popup',
-            'title': 'Popup title',
-            'trigger': '[data-trigger=trigger]',
-            'responsive': true,
-            'buttons': [{
-                text: 'Submit',
-                class: 'action'
-            }]
-        }}">
-    <div class="content">Hello, I'm Khang</div>
-</div>
-<button type="button"  id="click-me" data-mage-init='{"myjs": {}}' data-trigger="">
-    <span data-bind="i18n: 'Open Magento Modal Login'"></span>
-</button>
-<button type="button" class="action" data-trigger="">
-    <span data-bind="i18n: 'Open Custom Modal Login'"></span>
-</button>
 <div id="popup-modal" style="display:none;">
     <form class="form" id="custom-form" method="post" autocomplete="off">
         <fieldset class="fieldset">
