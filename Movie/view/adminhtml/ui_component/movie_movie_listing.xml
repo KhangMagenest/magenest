@@ -124,6 +124,7 @@
                 </item>
             </argument>
         </column>
+        <!-- rating colunm-->
         <column name="rating">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -133,6 +134,7 @@
                 </item>
             </argument>
         </column>
+        <!-- Director ID column -->
         <column name="director_id">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -147,6 +149,7 @@
                 </item>
             </argument>
         </column>
+        <!--
         <actionsColumn name="actions" class="Magenest\Movie\Block\Adminhtml\Edit\Edit">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
