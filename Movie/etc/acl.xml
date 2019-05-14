@@ -15,6 +15,7 @@
                     <resource id="Magenest_Movie::movies" title="Movies" translate="title" sortOrder="55" />
                     <resource id="Magenest_Movie::directors" title="Directors" translate="title" sortOrder="55" />
                     <resource id="Magenest_Movie::actors" title="Actors" translate="title" sortOrder="60" />
+                    <resource id="Magenest_Movie::orderinfo" title="OrderInfo" translate="title" sortOrder="60" />
                 </resource>
             </resource>
         </resources>

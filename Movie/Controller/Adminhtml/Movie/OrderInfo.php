@@ -5,7 +5,7 @@ namespace Magenest\Movie\Controller\Adminhtml\Movie;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 
-class Movie extends \Magento\Backend\App\Action
+class OrderInfo extends \Magento\Backend\App\Action
 {
     protected $resultPageFactory;
 
@@ -21,15 +21,13 @@ class Movie extends \Magento\Backend\App\Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('Magenest_Movie::movies');
-        $resultPage->addBreadcrumb(__('Movies'), __('Movies'));
-        $resultPage->addBreadcrumb(__('Manage Moves'), __('Manage Movies'));
-        $resultPage->getConfig()->getTitle()->prepend(__('Movies'));
+        $resultPage->setActiveMenu('Magenest_Movie::orderinfo');
+        $resultPage->getConfig()->getTitle()->prepend(__('Order Info'));
         return $resultPage;
     }
 
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Magenest_Movie::movies');
+        return $this->_authorization->isAllowed('Magenest_Movie::orderinfo');
     }
 }

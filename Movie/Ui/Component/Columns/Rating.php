@@ -8,7 +8,7 @@ use \Magento\Framework\View\Element\UiComponentFactory;
 use \Magento\Ui\Component\Listing\Columns\Column;
 use \Magento\Framework\Api\SearchCriteriaBuilder;
 
-class OrderGrid extends Column
+class Rating extends Column
 {
     protected $_orderRepository;
     protected $_searchCriteria;
@@ -24,17 +24,10 @@ class OrderGrid extends Column
     {
         if (isset($dataSource['data']['items'])) {
             foreach ($dataSource['data']['items'] as & $item) {
-                 if($item["entity_id"] % 2 == 0)
-                 {
-                     $class = 'minor';
-                     $value = 'Even';
-                 }
-                 else{
-                     $class = 'notice';
-                     $value = 'Odd';
-                 }
-                 //$item[$this->getData('name')]
-                $item['oddeven'] = '<span class="grid-severity-' . $class . '">' . $value . '</span>';
+
+                //$item[$this->getData('name')]
+                $value = $item['rating'];
+
             }
         }
 

@@ -124,7 +124,7 @@
                 </item>
             </argument>
         </column>
-        <!-- rating colunm-->
+        <!-- rating colunm
         <column name="rating">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -134,6 +134,17 @@
                 </item>
             </argument>
         </column>
+        -->
+            <column name="rating">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="visible" xsi:type="boolean">true</item>
+                        <item name="label" xsi:type="string" translate="true">Rating</item>
+                        <item name="bodyTmpl" xsi:type="string">Magenest/Movie/view/adminhtml/web/template/ratingstar</item>
+                    </item>
+                </argument>
+
+            </column>
         <!-- Director ID column -->
         <column name="director_id">
             <argument name="data" xsi:type="array">
@@ -149,7 +160,6 @@
                 </item>
             </argument>
         </column>
-        <!--
         <actionsColumn name="actions" class="Magenest\Movie\Block\Adminhtml\Edit\Edit">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">

@@ -35,6 +35,15 @@
                 action="movie/movie/actor"
                 resource="Magenest_Movie::actors"
         />
+        <add
+                id="Magenest_Movie::orderinfo"
+                title="OrderInfo"
+                module="Magenest_Movie"
+                sortOrder="60"
+                parent="Magenest_Movie::movie"
+                action="movie/movie/orderinfo"
+                resource="Magenest_Movie::orderinfo"
+        />
 
     </menu>
 </config>
