@@ -135,16 +135,27 @@
             </argument>
         </column>
         -->
-            <column name="rating">
-                <argument name="data" xsi:type="array">
-                    <item name="config" xsi:type="array">
-                        <item name="visible" xsi:type="boolean">true</item>
-                        <item name="label" xsi:type="string" translate="true">Rating</item>
-                        <item name="bodyTmpl" xsi:type="string">Magenest/Movie/view/adminhtml/web/template/ratingstar</item>
-                    </item>
-                </argument>
+<!--            <column name="rating">-->
+<!--                <argument name="data" xsi:type="array">-->
+<!--                    <item name="config" xsi:type="array">-->
+<!--                        <item name="visible" xsi:type="boolean">true</item>-->
+<!--                        <item name="label" xsi:type="string" translate="true">Rating</item>-->
+<!--                        <item name="bodyTmpl" xsi:type="string">Magenest/Movie/view/adminhtml/web/template/ratingstar</item>-->
+<!--                    </item>-->
+<!--                </argument>-->
 
-            </column>
+<!--            </column>-->
+        <column name="rating" component="Magenest_Movie/js/rating" sortOrder="100" displayArea="general-area">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">true</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Rating</label>
+                <bodyTmpl>Magenest_Movie/rating/ratingstar</bodyTmpl>
+            </settings>
+        </column>
         <!-- Director ID column -->
         <column name="director_id">
             <argument name="data" xsi:type="array">
